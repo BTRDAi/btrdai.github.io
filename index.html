@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BTRDAi LLC | GameOn AI Sports Intelligence</title>
+  <title>BTRDAi LLC | Software, APIs & Intelligent Applications</title>
 
-  <meta name="description"
-        content="BTRDAi LLC is the developer of GameOn, an AI-powered sports intelligence platform built to help users explore player props, trends, live markets, and data-driven insights.">
+  <meta
+    name="description"
+    content="BTRDAi LLC develops modern software, APIs, data services, AI-powered applications, and digital products. Creator of GameOn: AI Sports Intelligence."
+  >
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -31,6 +37,7 @@
     header {
       padding: 24px 0;
       border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(7,13,42,0.96);
     }
 
     nav {
@@ -61,7 +68,7 @@
     }
 
     .hero {
-      padding: 110px 0 90px;
+      padding: 115px 0 100px;
       text-align: center;
     }
 
@@ -75,8 +82,8 @@
     }
 
     h1 {
-      font-size: clamp(46px, 8vw, 82px);
-      line-height: 1;
+      font-size: clamp(46px, 8vw, 80px);
+      line-height: 1.05;
       margin-bottom: 24px;
     }
 
@@ -85,17 +92,23 @@
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 760px;
       margin: auto;
       color: #aab2d5;
       font-size: 20px;
     }
 
-    .badge {
-      display: inline-block;
+    .pill-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-top: 34px;
-      padding: 11px 20px;
-      border: 1px solid #00e0b8;
+    }
+
+    .pill {
+      padding: 10px 18px;
+      border: 1px solid rgba(0,224,184,0.55);
       border-radius: 999px;
       color: #00e0b8;
       font-weight: 700;
@@ -103,18 +116,18 @@
     }
 
     section {
-      padding: 75px 0;
+      padding: 80px 0;
     }
 
     .section-title {
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 14px;
     }
 
     .section-copy {
       color: #aab2d5;
-      max-width: 760px;
-      margin-bottom: 35px;
+      max-width: 780px;
+      margin-bottom: 38px;
     }
 
     .cards {
@@ -132,7 +145,8 @@
 
     .card h3 {
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 21px;
+      color: #00e0b8;
     }
 
     .card p {
@@ -140,19 +154,65 @@
       font-size: 15px;
     }
 
-    .highlight {
-      color: #00e0b8;
-    }
-
     .company {
       background: #0b1337;
+    }
+
+    .product-panel {
+      background: #121b45;
+      border: 1px solid rgba(0,224,184,0.25);
+      border-radius: 24px;
+      padding: 38px;
+    }
+
+    .product-label {
+      color: #00e0b8;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .product-panel h3 {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .product-panel p {
+      color: #aab2d5;
+      max-width: 780px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      background: #0b1337;
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .feature strong {
+      display: block;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .feature span {
+      color: #8f99c5;
+      font-size: 14px;
     }
 
     .contact-box {
       background: #121b45;
       border-radius: 20px;
       padding: 30px;
-      max-width: 700px;
+      max-width: 720px;
     }
 
     .contact-box a {
@@ -169,26 +229,31 @@
       font-size: 14px;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       nav {
         flex-direction: column;
         gap: 14px;
       }
 
       nav a {
-        margin: 0 10px;
+        margin: 0 9px;
       }
 
-      .cards {
+      .cards,
+      .feature-grid {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        padding: 80px 0 65px;
+        padding: 80px 0 70px;
       }
 
       .hero p {
         font-size: 18px;
+      }
+
+      .product-panel {
+        padding: 26px;
       }
     }
   </style>
@@ -202,8 +267,9 @@
       <div class="brand">BTRD<span>Ai</span> LLC</div>
 
       <div>
-        <a href="#gameon">GameOn</a>
         <a href="#company">Company</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#gameon">GameOn</a>
         <a href="#support">Support</a>
       </div>
     </nav>
@@ -214,83 +280,28 @@
 
   <section class="hero">
     <div class="container">
+
       <div class="eyebrow">BTRDAi LLC</div>
 
-      <h1>Smarter Sports Intelligence.<br><span>Built for Game Day.</span></h1>
+      <h1>
+        Building Software<br>
+        <span>for What’s Next.</span>
+      </h1>
 
       <p>
-        BTRDAi LLC develops technology-driven products that make complex
-        information easier to explore, understand, and use.
-        Our flagship product is GameOn: AI Sports Intelligence.
+        BTRDAi LLC develops modern software, APIs, intelligent applications,
+        and data-driven digital products designed to turn complex information
+        and workflows into useful technology.
       </p>
 
-      <div class="badge">Creator of GameOn</div>
-    </div>
-  </section>
-
-
-  <section id="gameon">
-    <div class="container">
-
-      <h2 class="section-title">GameOn: AI Sports Intelligence</h2>
-
-      <p class="section-copy">
-        GameOn is a sports intelligence platform designed to help users
-        explore live player prop markets, player trends, historical
-        performance, and AI-powered insights in one streamlined experience.
-      </p>
-
-      <div class="cards">
-
-        <div class="card">
-          <h3 class="highlight">Live Props</h3>
-          <p>
-            Browse current player prop markets and explore data-driven
-            signals across supported sports.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="highlight">AI Lineup Builder</h3>
-          <p>
-            GameOn analyzes available markets and surfaces selections
-            that meet stricter confidence and playability criteria.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="highlight">Player Trends</h3>
-          <p>
-            Review recent player performance, current lines, market
-            support, and completed-game trends.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="highlight">Hot Picks</h3>
-          <p>
-            Discover notable player trends based on current market
-            context and verified recent performance.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="highlight">Analytics</h3>
-          <p>
-            Follow GameOn model performance and review previously
-            graded AI Builder results.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 class="highlight">Responsible Information</h3>
-          <p>
-            GameOn provides sports information and analytical insights.
-            No prediction or outcome is guaranteed.
-          </p>
-        </div>
-
+      <div class="pill-row">
+        <div class="pill">Software</div>
+        <div class="pill">Applications</div>
+        <div class="pill">APIs</div>
+        <div class="pill">Data Services</div>
+        <div class="pill">AI Products</div>
       </div>
+
     </div>
   </section>
 
@@ -298,13 +309,136 @@
   <section id="company" class="company">
     <div class="container">
 
-      <h2 class="section-title">About BTRDAi LLC</h2>
+      <h2 class="section-title">About BTRDAi</h2>
 
       <p class="section-copy">
-        BTRDAi LLC is a United States-based technology company focused
-        on building modern software and artificial intelligence products.
-        GameOn: AI Sports Intelligence is developed and operated by BTRDAi LLC.
+        BTRDAi LLC is a United States-based technology company focused on
+        software development, API infrastructure, intelligent applications,
+        data services, and modern digital products. We build technology that
+        can support both our own applications and future software platforms.
       </p>
+
+    </div>
+  </section>
+
+
+  <section id="capabilities">
+    <div class="container">
+
+      <h2 class="section-title">What We Build</h2>
+
+      <p class="section-copy">
+        Our work spans consumer applications, software infrastructure,
+        intelligent data systems, and developer-facing technology.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Software & Apps</h3>
+          <p>
+            Modern mobile and web applications built around useful,
+            streamlined digital experiences.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>API Development</h3>
+          <p>
+            APIs and application services designed to connect software,
+            data sources, business logic, and digital products.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>API Distribution</h3>
+          <p>
+            Infrastructure for making structured data and software
+            capabilities accessible across applications and services.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>AI-Powered Products</h3>
+          <p>
+            Intelligent software experiences that use data and analytical
+            systems to help users understand complex information.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Data Services</h3>
+          <p>
+            Systems for transforming, organizing, processing, and delivering
+            application-ready data.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Product Development</h3>
+          <p>
+            BTRDAi creates and operates its own technology products while
+            building a foundation for future applications and platforms.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="gameon" class="company">
+    <div class="container">
+
+      <div class="product-panel">
+
+        <div class="product-label">Featured Product</div>
+
+        <h3>GameOn: AI Sports Intelligence</h3>
+
+        <p>
+          GameOn is BTRDAi's sports intelligence platform. It brings live
+          player prop markets, player trends, historical performance,
+          AI-powered signals, and model analytics together in one streamlined
+          experience.
+        </p>
+
+        <div class="feature-grid">
+
+          <div class="feature">
+            <strong>Live Props</strong>
+            <span>Current player prop markets and data-driven signals.</span>
+          </div>
+
+          <div class="feature">
+            <strong>AI Lineup Builder</strong>
+            <span>Selections that meet stricter confidence and playability criteria.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Hot Picks</strong>
+            <span>Current market context combined with recent player trends.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Player History</strong>
+            <span>Recent completed-game performance and market comparisons.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Analytics</strong>
+            <span>Model performance and previously graded AI Builder results.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Responsible Information</strong>
+            <span>Sports intelligence and analytical information without guaranteed outcomes.</span>
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
   </section>
@@ -313,21 +447,24 @@
   <section id="support">
     <div class="container">
 
-      <h2 class="section-title">Support & Contact</h2>
+      <h2 class="section-title">Contact & Support</h2>
+
+      <p class="section-copy">
+        Contact BTRDAi LLC for GameOn support, software inquiries,
+        API inquiries, partnerships, privacy questions, or general business matters.
+      </p>
 
       <div class="contact-box">
-        <p>
-          For GameOn support, business inquiries, privacy questions,
-          or account assistance, contact:
-        </p>
 
-        <br>
+        <strong>BTRDAi LLC</strong>
 
-        <p>
-          <strong>BTRDAi LLC</strong><br>
-          Email:
-          <a href="mailto:support@btrdai.com">support@btrdai.com</a>
-        </p>
+        <br><br>
+
+        Email:
+        <a href="mailto:support@btrdai.com">
+          support@btrdai.com
+        </a>
+
       </div>
 
     </div>
