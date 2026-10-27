@@ -1,484 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>BTRDAi LLC | Software, APIs & Intelligent Applications</title>
-
-  <meta
-    name="description"
-    content="BTRDAi LLC develops modern software, APIs, data services, AI-powered applications, and digital products. Creator of GameOn: AI Sports Intelligence."
-  >
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e29">
+  <meta name="description" content="BTRDAi LLC creates software, websites, mobile applications, integrations, and intelligent digital products. Explore our services and GameOn: AI Sports Intelligence.">
+  <meta property="og:title" content="BTRDAi LLC | Software, Websites & Intelligent Applications">
+  <meta property="og:description" content="Product-led software and digital experiences. Discover BTRDAi's capabilities and featured product, GameOn.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://btrdai.github.io/">
+  <title>BTRDAi LLC | Software, Websites & Intelligent Applications</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #070d2a;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    header {
-      padding: 24px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: rgba(7,13,42,0.96);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .brand span {
-      color: #00e0b8;
-    }
-
-    nav a {
-      color: #aab2d5;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #00e0b8;
-    }
-
-    .hero {
-      padding: 115px 0 100px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: #00e0b8;
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(46px, 8vw, 80px);
-      line-height: 1.05;
-      margin-bottom: 24px;
-    }
-
-    h1 span {
-      color: #00e0b8;
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: auto;
-      color: #aab2d5;
-      font-size: 20px;
-    }
-
-    .pill-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .pill {
-      padding: 10px 18px;
-      border: 1px solid rgba(0,224,184,0.55);
-      border-radius: 999px;
-      color: #00e0b8;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    section {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 14px;
-    }
-
-    .section-copy {
-      color: #aab2d5;
-      max-width: 780px;
-      margin-bottom: 38px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: #121b45;
-      border: 1px solid rgba(0,224,184,0.18);
-      border-radius: 20px;
-      padding: 28px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 21px;
-      color: #00e0b8;
-    }
-
-    .card p {
-      color: #aab2d5;
-      font-size: 15px;
-    }
-
-    .company {
-      background: #0b1337;
-    }
-
-    .product-panel {
-      background: #121b45;
-      border: 1px solid rgba(0,224,184,0.25);
-      border-radius: 24px;
-      padding: 38px;
-    }
-
-    .product-label {
-      color: #00e0b8;
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .product-panel h3 {
-      font-size: 32px;
-      margin-bottom: 14px;
-    }
-
-    .product-panel p {
-      color: #aab2d5;
-      max-width: 780px;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .feature {
-      background: #0b1337;
-      border-radius: 16px;
-      padding: 20px;
-    }
-
-    .feature strong {
-      display: block;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-
-    .feature span {
-      color: #8f99c5;
-      font-size: 14px;
-    }
-
-    .contact-box {
-      background: #121b45;
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 720px;
-    }
-
-    .contact-box a {
-      color: #00e0b8;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 35px 0;
-      text-align: center;
-      color: #7f89b2;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      nav {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      nav a {
-        margin: 0 9px;
-      }
-
-      .cards,
-      .feature-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 80px 0 70px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .product-panel {
-        padding: 26px;
-      }
-    }
+    :root { color-scheme: dark; --bg:#080e29; --surface:#101a3b; --surface-2:#152143; --text:#f7f9ff; --muted:#afb9d6; --teal:#00e0b8; --line:rgba(183,203,242,.17); --shadow:0 18px 50px rgba(0,0,0,.25); }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;overflow-wrap:break-word}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    :focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+    ::selection{background:var(--teal);color:var(--bg)}
+    .skip-link{position:absolute;left:15px;top:-80px;background:#fff;color:#09112c;padding:10px 14px;z-index:100}
+    .skip-link:focus{top:12px}
+    .container{width:min(1120px,calc(100% - 48px));margin:0 auto}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(8,14,41,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:78px}
+    .wordmark{display:inline-flex;align-items:center;gap:11px;font-size:21px;font-weight:850;letter-spacing:.02em;white-space:nowrap}
+    .wordmark-mark{width:37px;height:37px;display:grid;place-items:center;border:1px solid rgba(0,224,184,.5);background:linear-gradient(145deg,#163d52,#0b1939);border-radius:12px;color:var(--teal);font-size:15px;letter-spacing:-.03em}
+    .wordmark em{font-style:normal;color:var(--teal)}
+    .wordmark small{font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:800;align-self:flex-end;margin:0 0 3px -7px}
+    .desktop-nav{display:flex;align-items:center;gap:25px}
+    .desktop-nav a{font-size:14px;font-weight:650;color:#d4ddf2;transition:color .2s}
+    .desktop-nav a:hover,.footer-nav a:hover{color:var(--teal)}
+    .desktop-nav .nav-cta{color:#061426;background:var(--teal);padding:10px 16px;border-radius:9px;font-weight:800}
+    .desktop-nav .nav-cta:hover{color:#061426;background:#72f8df}
+    .mobile-nav{display:none;position:relative}
+    .mobile-nav summary{list-style:none;padding:8px 13px;border:1px solid var(--line);border-radius:9px;cursor:pointer;color:white;font-weight:700}
+    .mobile-nav summary::-webkit-details-marker{display:none}
+    .mobile-nav[open] .mobile-nav-links{display:flex}
+    .mobile-nav-links{position:absolute;right:0;top:47px;display:flex;flex-direction:column;gap:0;width:215px;padding:8px;background:#121b3b;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+    .mobile-nav-links a{display:block;padding:11px 12px;border-radius:7px;color:var(--text)}
+    .mobile-nav-links a:hover{background:#1b2b50;color:var(--teal)}
+    main>section{padding:88px 0}
+    .hero{position:relative;isolation:isolate;overflow:hidden;padding:112px 0 104px;background:radial-gradient(ellipse 570px 420px at 94% 28%,rgba(0,224,184,.12),transparent 74%),radial-gradient(ellipse 420px 340px at 13% 10%,rgba(89,118,225,.12),transparent 70%)}
+    .hero-layout{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(315px,.87fr);align-items:center;gap:70px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--teal);font-weight:800;font-size:12px;letter-spacing:2.2px;text-transform:uppercase}
+    .eyebrow:before{content:"";height:7px;width:7px;background:var(--teal);border-radius:50%;box-shadow:0 0 12px rgba(0,224,184,.65)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(48px,5.5vw,78px);line-height:1.04;letter-spacing:-.055em;margin:23px 0 22px;font-weight:850}
+    h1 span,.accent{color:var(--teal)}
+    .hero-copy{font-size:18px;color:var(--muted);max-width:630px;margin:0 0 30px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:47px;padding:12px 19px;border-radius:10px;border:1px solid rgba(196,215,245,.33);font-size:14px;font-weight:800;transition:transform .16s,background .16s,border-color .16s}
+    .btn:hover{transform:translateY(-2px);border-color:var(--teal)}
+    .btn-primary{background:var(--teal);border-color:var(--teal);color:#07142b}
+    .btn-primary:hover{background:#7df7df;border-color:#7df7df}
+    .btn-secondary{background:rgba(255,255,255,.035);color:#edf5ff}
+    .hero-footnote{font-size:13px;color:#9caacf;margin-top:22px}
+    .workflow-panel{position:relative;border-radius:23px;padding:26px;background:linear-gradient(155deg,#152548 0%,#0d1834 100%);border:1px solid rgba(0,224,184,.2);box-shadow:var(--shadow)}
+    .workflow-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:19px;border-bottom:1px solid var(--line);gap:12px}
+    .workflow-top span:first-child{font-size:13px;font-weight:850;letter-spacing:1px}
+    .workflow-status{font-size:11px;color:var(--teal);border:1px solid rgba(0,224,184,.3);border-radius:99px;padding:4px 9px;white-space:nowrap}
+    .workflow-step{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+    .workflow-step:last-of-type{border:0;padding-bottom:9px}
+    .step-number{flex:none;border-radius:11px;width:38px;height:38px;display:grid;place-items:center;background:#1d3651;color:var(--teal);font-weight:850}
+    .workflow-step strong{display:block;font-size:15px;margin-bottom:1px}
+    .workflow-step p{color:var(--muted);font-size:13px;margin:0}
+    .workflow-note{font-size:12px;color:#aab9d5;padding-top:10px}
+    .stats-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0b1531}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .stats-grid div{text-align:center;padding:20px 16px;color:#c8d5ea;font-weight:650;font-size:13px}
+    .stats-grid div+div{border-left:1px solid var(--line)}
+    section.alt{background:#0d1735}
+    .section-head{margin-bottom:32px;max-width:760px}
+    .kicker{color:var(--teal);font-size:12px;font-weight:850;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+    h2{font-size:clamp(32px,4vw,48px);line-height:1.14;letter-spacing:-.035em;margin-bottom:15px}
+    .section-intro{color:var(--muted);font-size:16px;max-width:760px}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:start}
+    .about-note{border:1px solid var(--line);background:var(--surface);border-radius:17px;padding:24px;color:#b9c6e0}
+    .about-note strong{display:block;color:white;margin-bottom:9px}
+    .service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .service{border:1px solid var(--line);border-radius:17px;background:var(--surface);min-width:0;transition:border-color .2s,background .2s;overflow:hidden}
+    .service:hover,.service[open]{border-color:rgba(0,224,184,.55);background:#152143}
+    .service>summary{cursor:pointer;list-style:none;padding:27px 25px;min-height:218px;display:flex;flex-direction:column}
+    .service summary::-webkit-details-marker{display:none}
+    .service-icon{width:39px;height:39px;border-radius:11px;border:1px solid rgba(0,224,184,.3);color:var(--teal);background:#122f43;display:grid;place-items:center;font-size:19px;font-weight:750;margin-bottom:16px}
+    .service-name{display:block;font-size:20px;line-height:1.2;font-weight:800;margin-bottom:10px}
+    .service-teaser{color:var(--muted);font-size:14px;line-height:1.6}
+    .service-more{margin-top:auto;color:var(--teal);font-weight:800;font-size:12px;letter-spacing:.01em;padding-top:14px}
+    .service-more::after{content:' ↗'}
+    .service[open] .service-more::after{content:' −'}
+    .service-detail{border-top:1px solid var(--line);padding:18px 25px 23px;font-size:14px;color:#c2cee2}
+    .service-detail p{margin-bottom:17px}
+    .text-link{color:var(--teal);font-weight:800;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+    .process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .process-item{padding:23px 20px;border-top:2px solid rgba(0,224,184,.6);background:#101b3b;border-radius:0 0 13px 13px}
+    .process-item .num{font-size:13px;color:var(--teal);font-weight:900;letter-spacing:2px;display:block;margin-bottom:16px}
+    .process-item h3{margin-bottom:8px;font-size:17px}
+    .process-item p{color:var(--muted);font-size:14px;margin:0}
+    .product{display:grid;grid-template-columns:1fr .85fr;gap:40px;align-items:center;background:linear-gradient(130deg,#172750,#101936);border:1px solid rgba(0,224,184,.24);border-radius:24px;padding:47px}
+    .product h2{font-size:clamp(30px,3.5vw,43px)}
+    .product p{color:var(--muted)}
+    .product-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+    .product-tags span{font-size:12px;padding:7px 11px;border:1px solid rgba(0,224,184,.27);background:rgba(0,224,184,.07);border-radius:99px;color:#c9f9ed}
+    .product-graphic{padding:26px;border-radius:17px;background:#0b1532;border:1px solid var(--line)}
+    .product-graphic .brandline{font-size:27px;font-weight:900;letter-spacing:-1.2px;margin-bottom:9px}
+    .product-graphic .brandline span{color:var(--teal)}
+    .product-graphic .graphrow{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 0;border-top:1px solid var(--line);font-size:13px;color:#b7c7df}
+    .product-graphic .graphrow strong{color:#fff;font-size:13px}
+    .faq{max-width:850px}
+    .faq details{border-bottom:1px solid var(--line);padding:18px 0}
+    .faq summary{list-style:none;cursor:pointer;font-weight:800;display:flex;justify-content:space-between;gap:15px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'+';color:var(--teal);font-size:22px;line-height:1}
+    .faq details[open] summary::after{content:'−'}
+    .faq details p{color:var(--muted);font-size:14px;padding-top:12px;max-width:740px;margin:0}
+    .contact-panel{display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(105deg,#15274c,#0f1d40);border:1px solid rgba(0,224,184,.25);border-radius:22px;padding:44px}
+    .contact-panel h2{font-size:clamp(32px,3.8vw,43px)}
+    .contact-panel p{color:var(--muted);max-width:600px;margin:0}
+    .contact-actions{display:flex;align-items:flex-start;flex-direction:column;gap:12px;flex:none}
+    .contact-email{font-weight:750;color:var(--teal);font-size:14px;text-decoration:underline;text-underline-offset:5px}
+    footer{border-top:1px solid var(--line);padding:32px 0 35px;color:#a4b1d0;font-size:13px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;align-items:center}
+    .footer-nav{display:flex;flex-wrap:wrap;gap:18px}
+    @media(max-width:1000px){.hero-layout{gap:32px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.container{width:min(100% - 36px,1120px)}.desktop-nav{display:none}.mobile-nav{display:block}.nav{min-height:70px}.hero{padding:74px 0}.hero-layout,.about-grid,.product{grid-template-columns:1fr}.hero-layout{gap:38px}.hero-copy{font-size:16px}.workflow-panel{max-width:560px}main>section{padding:68px 0}.product{padding:28px}.contact-panel{flex-direction:column;align-items:flex-start;padding:30px}.footer-grid{align-items:flex-start;flex-direction:column}.stats-grid div{font-size:12px;padding:17px 5px}}
+    @media(max-width:520px){h1{font-size:clamp(42px,11vw,62px)}.service-grid,.process-grid{grid-template-columns:1fr}.service>summary{min-height:0}.actions .btn{width:100%}.stats-grid{grid-template-columns:1fr}.stats-grid div+div{border-left:0;border-top:1px solid var(--line)}.product-graphic{padding:20px}.wordmark{font-size:19px}.contact-actions{width:100%}.contact-actions .btn{width:100%}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
   </style>
 </head>
-
 <body>
-
-<header>
-  <div class="container">
-    <nav>
-      <div class="brand">BTRD<span>Ai</span> LLC</div>
-
-      <div>
-        <a href="#company">Company</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#gameon">GameOn</a>
-        <a href="#support">Support</a>
-      </div>
-    </nav>
-  </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+ <div class="container nav">
+  <a class="wordmark" href="#top" aria-label="BTRDAi LLC, back to top"><span class="wordmark-mark" aria-hidden="true">B</span><span>BTRD<em>Ai</em></span><small>LLC</small></a>
+  <nav class="desktop-nav" aria-label="Primary navigation">
+   <a href="#about">Company</a><a href="#services">Services</a><a href="#process">Our Process</a><a href="#gameon">GameOn</a><a href="#contact" class="nav-cta">Contact Us ↗</a>
+  </nav>
+  <details class="mobile-nav"><summary aria-label="Toggle site navigation">☰ Menu</summary><nav class="mobile-nav-links" aria-label="Mobile navigation"><a href="#about">Company</a><a href="#services">Services</a><a href="#process">Our Process</a><a href="#gameon">GameOn</a><a href="#contact">Contact Us</a></nav></details>
+ </div>
 </header>
-
-<main>
-
-  <section class="hero">
-    <div class="container">
-
-      <div class="eyebrow">BTRDAi LLC</div>
-
-      <h1>
-        Building Software<br>
-        <span>for What’s Next.</span>
-      </h1>
-
-      <p>
-        BTRDAi LLC develops modern software, APIs, intelligent applications,
-        and data-driven digital products designed to turn complex information
-        and workflows into useful technology.
-      </p>
-
-      <div class="pill-row">
-        <div class="pill">Software</div>
-        <div class="pill">Applications</div>
-        <div class="pill">APIs</div>
-        <div class="pill">Data Services</div>
-        <div class="pill">AI Products</div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="company" class="company">
-    <div class="container">
-
-      <h2 class="section-title">About BTRDAi</h2>
-
-      <p class="section-copy">
-        BTRDAi LLC is a United States-based technology company focused on
-        software development, API infrastructure, intelligent applications,
-        data services, and modern digital products. We build technology that
-        can support both our own applications and future software platforms.
-      </p>
-
-    </div>
-  </section>
-
-
-  <section id="capabilities">
-    <div class="container">
-
-      <h2 class="section-title">What We Build</h2>
-
-      <p class="section-copy">
-        Our work spans consumer applications, software infrastructure,
-        intelligent data systems, and developer-facing technology.
-      </p>
-
-      <div class="cards">
-
-        <div class="card">
-          <h3>Software & Apps</h3>
-          <p>
-            Modern mobile and web applications built around useful,
-            streamlined digital experiences.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>API Development</h3>
-          <p>
-            APIs and application services designed to connect software,
-            data sources, business logic, and digital products.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>API Distribution</h3>
-          <p>
-            Infrastructure for making structured data and software
-            capabilities accessible across applications and services.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>AI-Powered Products</h3>
-          <p>
-            Intelligent software experiences that use data and analytical
-            systems to help users understand complex information.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Data Services</h3>
-          <p>
-            Systems for transforming, organizing, processing, and delivering
-            application-ready data.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Product Development</h3>
-          <p>
-            BTRDAi creates and operates its own technology products while
-            building a foundation for future applications and platforms.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="gameon" class="company">
-    <div class="container">
-
-      <div class="product-panel">
-
-        <div class="product-label">Featured Product</div>
-
-        <h3>GameOn: AI Sports Intelligence</h3>
-
-        <p>
-          GameOn is BTRDAi's sports intelligence platform. It brings live
-          player prop markets, player trends, historical performance,
-          AI-powered signals, and model analytics together in one streamlined
-          experience.
-        </p>
-
-        <div class="feature-grid">
-
-          <div class="feature">
-            <strong>Live Props</strong>
-            <span>Current player prop markets and data-driven signals.</span>
-          </div>
-
-          <div class="feature">
-            <strong>AI Lineup Builder</strong>
-            <span>Selections that meet stricter confidence and playability criteria.</span>
-          </div>
-
-          <div class="feature">
-            <strong>Hot Picks</strong>
-            <span>Current market context combined with recent player trends.</span>
-          </div>
-
-          <div class="feature">
-            <strong>Player History</strong>
-            <span>Recent completed-game performance and market comparisons.</span>
-          </div>
-
-          <div class="feature">
-            <strong>Analytics</strong>
-            <span>Model performance and previously graded AI Builder results.</span>
-          </div>
-
-          <div class="feature">
-            <strong>Responsible Information</strong>
-            <span>Sports intelligence and analytical information without guaranteed outcomes.</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="support">
-    <div class="container">
-
-      <h2 class="section-title">Contact & Support</h2>
-
-      <p class="section-copy">
-        Contact BTRDAi LLC for GameOn support, software inquiries,
-        API inquiries, partnerships, privacy questions, or general business matters.
-      </p>
-
-      <div class="contact-box">
-
-        <strong>BTRDAi LLC</strong>
-
-        <br><br>
-
-        Email:
-        <a href="mailto:support@btrdai.com">
-          support@btrdai.com
-        </a>
-
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-
-<footer>
-  <div class="container">
-    © 2026 BTRDAi LLC. All rights reserved.<br>
-    GameOn: AI Sports Intelligence is a product of BTRDAi LLC.
+<main id="main">
+ <section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-layout">
+   <div>
+    <div class="eyebrow">Independent Technology Company</div>
+    <h1 id="hero-title">Building software <span>for what’s next.</span></h1>
+    <p class="hero-copy">BTRDAi LLC creates intelligent applications and modern digital experiences—from software products and websites to APIs, integrations, and data-driven tools.</p>
+    <div class="actions"><a class="btn btn-primary" href="mailto:support@btrdai.com?subject=Project%20Inquiry%20-%20BTRDAi%20LLC">Discuss a project <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#services">Explore our services <span aria-hidden="true">↓</span></a></div>
+    <p class="hero-footnote">A product-led approach to solving real-world problems through technology.</p>
+   </div>
+   <aside class="workflow-panel" aria-label="Our project approach">
+    <div class="workflow-top"><span>FROM IDEA TO DELIVERY</span><span class="workflow-status">Our approach</span></div>
+    <div class="workflow-step"><div class="step-number">01</div><div><strong>Understand the goal</strong><p>Identify business needs, users, requirements, and constraints.</p></div></div>
+    <div class="workflow-step"><div class="step-number">02</div><div><strong>Design the experience</strong><p>Plan pages, user journeys, interfaces, and integrations.</p></div></div>
+    <div class="workflow-step"><div class="step-number">03</div><div><strong>Build and validate</strong><p>Develop and test against an agreed project scope.</p></div></div>
+    <div class="workflow-step"><div class="step-number">04</div><div><strong>Launch and improve</strong><p>Prepare for release and define future support needs.</p></div></div>
+    <p class="workflow-note">Sensitive data and regulated integrations are assessed separately with appropriate specialists.</p>
+   </aside>
   </div>
-</footer>
-
+ </section>
+ <div class="stats-bar" aria-label="Company focus"><div class="container stats-grid"><div>Software & Applications</div><div>Websites & Digital Experiences</div><div>Applied AI & Data Systems</div></div></div>
+ <section class="alt" id="about" aria-labelledby="about-title">
+  <span id="company" aria-hidden="true"></span>
+  <div class="container about-grid">
+   <div><div class="kicker">About the company</div><h2 id="about-title">Technology with a <span class="accent">practical purpose.</span></h2><p class="section-intro">BTRDAi LLC is a U.S.-based technology company focused on building useful software and digital products. Our work brings together product strategy, application development, APIs, automation, and data-driven experiences.</p><p class="section-intro">We build and operate our own products, including GameOn: AI Sports Intelligence, and explore client engagements with clearly defined deliverables and technical requirements.</p></div>
+   <div class="about-note"><strong>How we work</strong>We believe a strong digital product begins with understanding what people need it to do. Projects are approached with clear scope, practical design, reliable functionality, and honest communication about specialized requirements.</div>
+  </div>
+ </section>
+ <section id="services" aria-labelledby="services-title">
+  <span id="capabilities" aria-hidden="true"></span>
+  <div class="container">
+   <div class="section-head"><div class="kicker">Capabilities & services</div><h2 id="services-title">What we <span class="accent">build.</span></h2><p class="section-intro">Explore areas where BTRDAi can help plan and deliver digital experiences. Select a capability to see what a project could include.</p></div>
+   <div class="service-grid">
+    <details class="service"><summary><span class="service-icon" aria-hidden="true">⌘</span><span class="service-name">Website Design & Development</span><span class="service-teaser">Responsive business websites with intuitive navigation and useful functionality.</span><span class="service-more">Explore capability</span></summary><div class="service-detail"><p>Potential scope: discovery, visual redesign, mobile-friendly pages, content organization, basic SEO, existing-system links, testing, and launch assistance. Secure patient-data features require additional review.</p><a class="text-link" href="mailto:support@btrdai.com?subject=Website%20Development%20Inquiry">Discuss a website project ↗</a></div></details>
+    <details class="service"><summary><span class="service-icon" aria-hidden="true">▣</span><span class="service-name">Mobile & Web Applications</span><span class="service-teaser">Application interfaces and digital tools organized around real user needs.</span><span class="service-more">Explore capability</span></summary><div class="service-detail"><p>Potential scope: prototypes, application screens, feature planning, API-connected experiences, quality assurance, and launch coordination.</p><a class="text-link" href="mailto:support@btrdai.com?subject=Application%20Development%20Inquiry">Discuss an app project ↗</a></div></details>
+    <details class="service"><summary><span class="service-icon" aria-hidden="true">⇄</span><span class="service-name">APIs & Integrations</span><span class="service-teaser">Connecting websites, services, and approved third-party systems.</span><span class="service-more">Explore capability</span></summary><div class="service-detail"><p>Potential scope: API planning, service integration, data exchange, and integration testing. Access controls and sensitive-data requirements are assessed before implementation.</p><a class="text-link" href="mailto:support@btrdai.com?subject=API%20Integration%20Inquiry">Discuss an integration ↗</a></div></details>
+    <details class="service"><summary><span class="service-icon" aria-hidden="true">✦</span><span class="service-name">AI & Workflow Automation</span><span class="service-teaser">Practical automation and AI-assisted experiences for defined workflows.</span><span class="service-more">Explore capability</span></summary><div class="service-detail"><p>Potential scope: AI feature prototypes, repetitive-workflow improvements, assisted data processing, and human-review checkpoints.</p><a class="text-link" href="mailto:support@btrdai.com?subject=AI%20Automation%20Inquiry">Discuss automation ↗</a></div></details>
+    <details class="service"><summary><span class="service-icon" aria-hidden="true">▥</span><span class="service-name">Data Tools & Dashboards</span><span class="service-teaser">Making structured data easier to organize, monitor, and understand.</span><span class="service-more">Explore capability</span></summary><div class="service-detail"><p>Potential scope: dashboard concepts, reporting workflows, data feeds, transformation, and visual analytics.</p><a class="text-link" href="mailto:support@btrdai.com?subject=Data%20Services%20Inquiry">Discuss a data project ↗</a></div></details>
+    <details class="service"><summary><span class="service-icon" aria-hidden="true">◇</span><span class="service-name">Product Strategy & Prototypes</span><span class="service-teaser">Turning ideas into testable digital concepts and structured build plans.</span><span class="service-more">Explore capability</span></summary><div class="service-detail"><p>Potential scope: feature requirements, prototype design, technical discovery, implementation phases, and project planning.</p><a class="text-link" href="mailto:support@btrdai.com?subject=Product%20Prototype%20Inquiry">Discuss an idea ↗</a></div></details>
+   </div>
+  </div>
+ </section>
+ <section class="alt" id="process" aria-labelledby="process-title"><div class="container"><div class="section-head"><div class="kicker">The process</div><h2 id="process-title">A clear path from <span class="accent">concept to launch.</span></h2><p class="section-intro">Every engagement begins by agreeing on what success looks like and what is included.</p></div><div class="process-grid"><div class="process-item"><span class="num">01 / DISCOVER</span><h3>Define the problem</h3><p>Discuss goals, audiences, requirements, constraints, and timeline.</p></div><div class="process-item"><span class="num">02 / DESIGN</span><h3>Plan the experience</h3><p>Outline content, user flow, navigation, and visual direction.</p></div><div class="process-item"><span class="num">03 / DEVELOP</span><h3>Build and test</h3><p>Implement agreed functionality and review quality before release.</p></div><div class="process-item"><span class="num">04 / LAUNCH</span><h3>Release thoughtfully</h3><p>Coordinate handoff, publishing, and ongoing support expectations.</p></div></div></div></section>
+ <section id="gameon" aria-labelledby="gameon-title"><div class="container"><div class="product"><div><div class="kicker">Featured BTRDAi product</div><h2 id="gameon-title">GameOn: <span class="accent">AI Sports Intelligence</span></h2><p>GameOn is BTRDAi's sports intelligence application, bringing player prop markets, recent performance, historical context, and AI-assisted signals into a single experience.</p><p>Developing and operating GameOn informs our product-focused approach to software design, data integration, feature delivery, and continuous improvement.</p><div class="actions"><a class="btn btn-primary" href="mailto:support@btrdai.com?subject=GameOn%20Product%20Inquiry">Ask about GameOn ↗</a><a class="btn btn-secondary" href="#contact">Contact BTRDAi</a></div><div class="product-tags"><span>Live Props</span><span>AI Builder</span><span>Hot Picks</span><span>Player Analytics</span></div></div><div class="product-graphic" aria-label="GameOn feature overview"><div class="brandline">GAME<span>ON</span></div><p style="font-size:13px;margin-bottom:15px">AI SPORTS INTELLIGENCE</p><div class="graphrow"><strong>Player insights</strong><span>History & trends</span></div><div class="graphrow"><strong>Live markets</strong><span>Prop context</span></div><div class="graphrow"><strong>AI signals</strong><span>Model-assisted</span></div><div class="graphrow"><strong>Analytics</strong><span>Performance context</span></div></div></div></div></section>
+ <section class="alt" id="questions" aria-labelledby="faq-title"><div class="container"><div class="section-head"><div class="kicker">Common questions</div><h2 id="faq-title">Working with <span class="accent">BTRDAi.</span></h2></div><div class="faq"><details><summary>Does BTRDAi take on website projects?</summary><p>Website design and development is an area we can scope with organizations. We start with an inquiry to determine requirements, delivery approach, and whether specialist support is needed.</p></details><details><summary>Can a redesigned site connect to an existing business platform?</summary><p>Often yes. Links to approved third-party portals can be straightforward; embedded experiences, login integrations, and data exchange require technical and security review. We assess the specific provider and scope before committing.</p></details><details><summary>Can BTRDAi build healthcare or other sensitive-data systems?</summary><p>Regulated data projects must be evaluated individually. They can require specialized partners, contractual safeguards, and a separate security/compliance plan. A standard website project does not include storing sensitive patient data.</p></details><details><summary>How do we request an estimate?</summary><p>Use the contact link below and tell us about your organization, project goals, required features, and target timing. We can then discuss a realistic scope and estimate.</p></details></div></div></section>
+ <section id="contact" aria-labelledby="contact-title"><span id="support" aria-hidden="true"></span><div class="container"><div class="contact-panel"><div><div class="kicker">Contact BTRDAi</div><h2 id="contact-title">Have a project <span class="accent">in mind?</span></h2><p>Tell us what you're planning. We welcome website and software inquiries, partnership conversations, GameOn support questions, and general business messages.</p></div><div class="contact-actions"><a class="btn btn-primary" href="mailto:support@btrdai.com?subject=New%20Business%20Inquiry%20-%20BTRDAi%20LLC">Start a conversation ↗</a><a class="contact-email" href="mailto:support@btrdai.com">support@btrdai.com</a></div></div></div></section>
+</main>
+<footer><div class="container footer-grid"><div>© 2026 BTRDAi LLC. All rights reserved.<br>GameOn: AI Sports Intelligence is a product of BTRDAi LLC.</div><nav class="footer-nav" aria-label="Footer navigation"><a href="#top">Back to top ↑</a><a href="#services">Services</a><a href="#gameon">GameOn</a><a href="#contact">Contact</a></nav></div></footer>
 </body>
 </html>
